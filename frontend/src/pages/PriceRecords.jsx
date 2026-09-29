@@ -3,6 +3,7 @@ import { getPrices, getProducts } from "../services/api";
 import Filters from "../components/Filters";
 import PriceTable from "../components/PriceTable";
 import Loader from "../components/Loader";
+import "./PriceRecords.css";
 export default function PriceRecords() {
   const [products, setProducts] = useState([]);
   const [rows, setRows] = useState([]);

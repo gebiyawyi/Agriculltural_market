@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getAnalyticsByProduct } from "../services/api";
 import ProductBarChart from "../components/ProductBarChart";
 import Loader from "../components/Loader";
+import "./Analytics.css";
 export default function Analytics() {
   const [rows, setRows] = useState([]);
   const [loading, setLoading] = useState(true);

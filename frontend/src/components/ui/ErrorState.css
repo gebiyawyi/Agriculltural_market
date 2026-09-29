@@ -1,0 +1,28 @@
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-7) var(--space-4);
+  text-align: center;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: var(--radius-md);
+}
+
+.error-state__icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+}
+.error-state__title {
+  font-size: var(--text-lg);
+  color: var(--color-error);
+  margin-bottom: var(--space-2);
+}
+
+.error-state__message {
+  font-size: var(--text-sm);
+  color: #742a2a;
+  max-width: 480px;
+  margin-bottom: var(--space-4);
+}

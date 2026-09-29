@@ -1,0 +1,368 @@
+
+.page {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(18px, 3vw, 34px);
+  overflow: hidden;
+  border: 1px solid #e2ebe4;
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      ellipse at 0% 0%,
+      rgba(34, 128, 88, 0.09),
+      transparent 36%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(22, 101, 78, 0.07),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      #f8fbf8 0%,
+      #f1f6f2 55%,
+      #f8faf9 100%
+    );
+  color: #1e293b;
+}
+.page h1 {
+  position: relative;
+  margin: 0;
+  padding-bottom: 18px;
+  color: #173f2b;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.3;
+}
+
+.page h1::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 58px;
+  height: 4px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #216647, #72a77b);
+  content: "";
+}
+
+.page > :nth-child(2) {
+  min-width: 0;
+}
+.filters,
+.price-filters,
+.filters-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 18px;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #e0e9e2;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
+}
+.filters .form-group,
+.price-filters .form-group,
+.filters-card .form-group,
+.filters .filter-group,
+.price-filters .filter-group,
+.filters-card .filter-group {
+  display: flex;
+  flex: 1 1 180px;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+.filters label,
+.price-filters label,
+.filters-card label {
+  color: #31483a;
+  font-size: 13px;
+  font-weight: 650;
+}
+.filters input,
+.filters select,
+.price-filters input,
+.price-filters select,
+.filters-card input,
+.filters-card select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 11px 14px;
+  border: 1px solid #d7e1da;
+  border-radius: 9px;
+  background: #fff;
+  color: #263b32;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.filters input:hover,
+.filters select:hover,
+.price-filters input:hover,
+.price-filters select:hover,
+.filters-card input:hover,
+.filters-card select:hover {
+  border-color: #9ab9a2;
+}
+
+.filters input:focus,
+.filters select:focus,
+.price-filters input:focus,
+.price-filters select:focus,
+.filters-card input:focus,
+.filters-card select:focus {
+  outline: none;
+  border-color: #28744b;
+  box-shadow: 0 0 0 4px rgba(40, 116, 75, 0.11);
+
+.filters button,
+.price-filters button,
+.filters-card button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 11px 22px;
+  border: 1px solid #d6e5d9;
+  border-radius: 9px;
+  background: #eff6ef;
+  color: #28623f;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.filters button:hover,
+.price-filters button:hover,
+.filters-card button:hover {
+  border-color: #a9cbb0;
+  background: #e1efe2;
+}
+
+.filters button:active,
+.price-filters button:active,
+.filters-card button:active {
+  transform: translateY(1px);
+}
+
+.price-table,
+.price-table-wrapper,
+.table-container {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  border: 1px solid #e0e9e2;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
+}
+
+.page table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  color: #33443a;
+  font-size: 13px;
+  text-align: left;
+}
+
+.page table thead {
+  background: #edf5ee;
+}
+
+.page table thead th {
+  padding: 17px 20px;
+  border-bottom: 1px solid #dce8de;
+  color: #386346;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.page table tbody td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #edf1ee;
+  color: #405047;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.page table tbody tr {
+  transition: background-color 0.18s ease;
+}
+
+.page table tbody tr:hover {
+  background: #f3f9f3;
+}
+
+.page table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.page table thead th:first-child {
+  border-top-left-radius: 14px;
+}
+
+.page table thead th:last-child {
+  border-top-right-radius: 14px;
+}
+
+.page table td.numeric,
+.page table th.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.page table .badge,
+.page table .status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border: 1px solid #d6e8d9;
+  border-radius: 20px;
+  background: #edf7ee;
+  color: #347347;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.page .loader,
+.page .loading,
+.page .loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 30px;
+  border: 1px solid #e0e9e2;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #64806c;
+  font-size: 14px;
+}
+.page .empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 220px;
+  padding: 30px;
+  border: 1px dashed #cbdccf;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #75877a;
+  text-align: center;
+}
+
+.page .empty-state h3 {
+  margin: 0;
+  color: #315b3e;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.page .empty-state p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+@media (max-width: 768px) {
+  .page {
+    gap: 20px;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .filters,
+  .price-filters,
+  .filters-card {
+    gap: 15px;
+    padding: 18px;
+  }
+
+  .filters .form-group,
+  .price-filters .form-group,
+  .filters-card .form-group,
+  .filters .filter-group,
+  .price-filters .filter-group,
+  .filters-card .filter-group {
+    flex: 1 1 100%;
+  }
+
+  .filters button,
+  .price-filters button,
+  .filters-card button {
+    width: 100%;
+  }
+
+  .page table thead th,
+  .page table tbody td {
+    padding: 13px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    gap: 18px;
+    padding: 13px;
+  }
+
+  .page h1 {
+    font-size: 25px;
+  }
+
+  .filters,
+  .price-filters,
+  .filters-card {
+    padding: 15px;
+  }
+
+  .page table {
+    font-size: 12px;
+  }
+
+  .page table thead th {
+    padding: 12px;
+    font-size: 10px;
+  }
+
+  .page table tbody td {
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .page table tbody tr,
+  .filters button,
+  .price-filters button,
+  .filters-card button {
+    transition: none;
+  }
+}
